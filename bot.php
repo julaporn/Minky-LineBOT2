@@ -11,7 +11,7 @@ $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['ESP'])) {
    send_LINE($events['ESP']);
-   echo "OK";
+   echo "JSON data OK";
 }
 
 if (!is_null($events['events'])) {
@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 	   // Get replyToken
 	   $replyToken = $event['replyToken'];
   	   // Build message to reply back
-           $Topic = "ESP32" ;
+       $Topic = "NodeMCU_No1" ;
 	   getMqttfromlineMsg($Topic,$text);
 	}
     }
