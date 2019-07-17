@@ -4,7 +4,7 @@ function send_LINE($msg){
  $access_token = '4ipMPNdnISFqBZJ+Zdx4cvMn8/L+RaD76H7xDQJElyeWKQsLD2qh86aVmXs+wHu3o0BmRn83h0ibHrMwGAFr3H5WHe5dzmYi4Ik13FjFDCB9RAC4wZPwenW+CItiqydLDaAK05DZreUfsHU42wNBcgdB04t89/1O/w1cDnyilFU=';    //PUT LINE token ID at "Channel access token (long-lived)" 
  $messages = [
         'type' => 'text',
-        'text' => $msg
+        'text' => $msg 
       ];
 
       // Make a POST Request to Messaging API to reply to sender
@@ -16,7 +16,9 @@ function send_LINE($msg){
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-      $ch = curl_init($url);
+      $ch = curl_init();
+	  curl_setopt($ch, CURLOPT_URL,$url);
+	  curl_setopt($ch, CURLOPT_HEADER, false);
       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
