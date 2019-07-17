@@ -9,8 +9,8 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 
 // Validate parsed JSON data
-if (!is_null($events['ESP'])) {
-   send_LINE($events['ESP']);
+if (!is_null($events['NodeMCU_No1'])) {
+   send_LINE($events['NodeMCU_No1']);
    echo "JSON data OK";
 }
 
