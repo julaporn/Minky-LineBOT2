@@ -1,11 +1,8 @@
  <?php
-   $access_token = '4ipMPNdnISFqBZJ+Zdx4cvMn8/L+RaD76H7xDQJElyeWKQsLD2qh86aVmXs+wHu3o0BmRn83h0ibHrMwGAFr3H5WHe5dzmYi4Ik13FjFDCB9RAC4wZPwenW+CItiqydLDaAK05DZreUfsHU42wNBcgdB04t89/1O/w1cDnyilFU='; 
-   $arrayHeader = array();
-   $arrayHeader[] = "Content-Type: application/json";
-   $arrayHeader[] = "Authorization: Bearer {$accessToken}";
-   
+  
+
 function send_LINE($msg){
- 
+ $access_token = '1c45df9deac671317e09f57ce8e11c9a'; 
 
   $messages = [
         'type' => 'text',
@@ -17,7 +14,7 @@ function send_LINE($msg){
       $url = 'https://api.line.me/v2/bot/message/push';
       $data = [
 
-        'to' => 'U930cda3cddf9ba7693afa910d00858eb',
+        'to' => '1599444743',
         'messages' => [$messages],
       ];
       $post = json_encode($data);
