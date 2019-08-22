@@ -3,7 +3,7 @@
        $APPID= "MinkyLineRobot/"; //enter your appid
      $KEY = "FTSJqOMU4gDgyHw"; //enter your key
     $SECRET = "FyBK6CJ84QGo8RgJkocpFhg7S"; //enter your secret
-    $Topic = "$topic"; 
+    $Topic = "$NodeMCU_No1"; 
       put("https://api.netpie.io/microgear/".$APPID.$Topic."?retain&auth=".$KEY.":".$SECRET,$msg);
  
   }

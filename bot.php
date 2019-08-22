@@ -7,40 +7,15 @@ $content = file_get_contents('php://input');
 // Parse JSON
 
 $events = json_decode($content, true);
-
-
-
-
-		//send_LINE($events['ESP']);
-	  $id = 'U930cda3cddf9ba7693afa910d00858eb';
-      $arrayPostData['to'] = $id;
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาาว";
-      $arrayPostData['messages'][1]['type'] = "sticker";
-      $arrayPostData['messages'][1]['packageId'] = "2";
-      $arrayPostData['messages'][1]['stickerId'] = "34";
-      pushMsg($arrayHeader,$arrayPostData);	
 // Validate parsed JSON data
 if (!is_null($events['ESP'])) {
 	
-	//send_LINE($events['ESP']);
-	  $id = 'U930cda3cddf9ba7693afa910d00858eb';
-      $arrayPostData['to'] = $id;
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
-      $arrayPostData['messages'][1]['type'] = "sticker";
-      $arrayPostData['messages'][1]['packageId'] = "2";
-      $arrayPostData['messages'][1]['stickerId'] = "34";
-      pushMsg($arrayHeader,$arrayPostData);	
-	
+	send_LINE($events['ESP']);
 		
 	echo "OK";
 	}
 if (!is_null($events['events'])) {
 	echo "line bot";
-	
-
-	
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
@@ -59,7 +34,7 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-$Topic = "NodeMCU1" ;
+$Topic = "NodeMCU_No1" ;
 $text = "Test";
 getMqttfromlineMsg($Topic,$text);
 echo "OK3";
