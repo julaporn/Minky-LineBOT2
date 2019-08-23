@@ -1,10 +1,10 @@
 <?php
    $accessToken = "4ipMPNdnISFqBZJ+Zdx4cvMn8/L+RaD76H7xDQJElyeWKQsLD2qh86aVmXs+wHu3o0BmRn83h0ibHrMwGAFr3H5WHe5dzmYi4Ik13FjFDCB9RAC4wZPwenW+CItiqydLDaAK05DZreUfsHU42wNBcgdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
    
-
+   //****************************
    $content = file_get_contents('php://input');
    $arrayJson = json_decode($content, true);
-
+   //****************************
    
    $arrayHeader = array();
    $arrayHeader[] = "Content-Type: application/json";
@@ -24,7 +24,7 @@
       $arrayPostData['messages'][1]['packageId'] = "2";
       $arrayPostData['messages'][1]['stickerId'] = "34";
       pushMsg($arrayHeader,$arrayPostData);
-	  echo "Push Message"
+	  echo "Push Message";
    }
    function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
