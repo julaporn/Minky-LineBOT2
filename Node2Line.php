@@ -10,11 +10,11 @@
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
    //รับข้อความจากผู้ใช้
-   //$message = $arrayJson['events'][0]['message']['text'];
-   $message = $arrayJson['events'][0]['ESP']['values'];
+   $message = $arrayJson['events'][0]['message']['text'];
+   //$message = $arrayJson['events'][0]['ESP']['values'];
    //รับ id ของผู้ใช้
-   //$id = $arrayJson['events'][0]['source']['userId'];
-   $id = 'U930cda3cddf9ba7693afa910d00858eb'
+   $id = $arrayJson['events'][0]['source']['userId'];
+   //$id = 'U930cda3cddf9ba7693afa910d00858eb'
    #ตัวอย่าง Message Type "Text + Sticker"
    if($message == "1"){
       $arrayPostData['to'] = $id;
