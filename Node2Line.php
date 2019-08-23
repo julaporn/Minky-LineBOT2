@@ -14,7 +14,7 @@
    //$message = $arrayJson['events'][0]['ESP']['values'];
    //รับ id ของผู้ใช้
    //$id = $arrayJson['events'][0]['source']['userId'];
-   $arrayJson['events'][0]['source']['userId'] = "U930cda3cddf9ba7693afa910d00858eb"
+   $arrayJson['events'][0]['source']['userId'] = "U930cda3cddf9ba7693afa910d00858eb";
    $id = $arrayJson['events'][0]['source']['userId'];
    #ตัวอย่าง Message Type "Text + Sticker"
    echo "Debug 1";
