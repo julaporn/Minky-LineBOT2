@@ -1,6 +1,6 @@
 <?php
    $accessToken = "4ipMPNdnISFqBZJ+Zdx4cvMn8/L+RaD76H7xDQJElyeWKQsLD2qh86aVmXs+wHu3o0BmRn83h0ibHrMwGAFr3H5WHe5dzmYi4Ik13FjFDCB9RAC4wZPwenW+CItiqydLDaAK05DZreUfsHU42wNBcgdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
-   
+   $id = = "U930cda3cddf9ba7693afa910d00858eb";
    //****************************
    $content = file_get_contents('php://input');
    $arrayJson = json_decode($content, true);
@@ -14,8 +14,8 @@
    //$message = $arrayJson['events'][0]['ESP']['values'];
    //รับ id ของผู้ใช้
    //$id = $arrayJson['events'][0]['source']['userId'];
-   $arrayJson['events'][0]['source']['userId'] = "U930cda3cddf9ba7693afa910d00858eb";
-   $id = $arrayJson['events'][0]['source']['userId'];
+    //$arrayJson['events'][0]['source']['userId'] = "U930cda3cddf9ba7693afa910d00858eb";
+    //$id = $arrayJson['events'][0]['source']['userId'];
    #ตัวอย่าง Message Type "Text + Sticker"
    echo "Debug 1";
    
